@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "91f276d8-eda4-423d-802c-7bb46535efe8",
+		"name": "Integration-Workspace-Smriti",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetUser_Gender-Status",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[ \r\n    { \r\n        \"id\": 2482, \r\n        \"name\": \"Kartik Kocchar\", \r\n        \"email\": \"kartik_kocchar@rutherford.io\", \r\n        \"gender\": \"female\",\r\n        \"status\": \"inactive\" \r\n    } \r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://milestone1-smriti-yyjx.us-e2.cloudhub.io/milestone1",
+					"protocol": "http",
+					"host": [
+						"milestone1-smriti-yyjx",
+						"us-e2",
+						"cloudhub",
+						"io"
+					],
+					"path": [
+						"milestone1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostUser_request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"post_id\": 2003 \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://milestone1-smriti-yyjx.us-e2.cloudhub.io/milestone2",
+					"protocol": "http",
+					"host": [
+						"milestone1-smriti-yyjx",
+						"us-e2",
+						"cloudhub",
+						"io"
+					],
+					"path": [
+						"milestone2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUser_M3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://milestone1-smriti-yyjx.us-e2.cloudhub.io/milestone3",
+					"protocol": "http",
+					"host": [
+						"milestone1-smriti-yyjx",
+						"us-e2",
+						"cloudhub",
+						"io"
+					],
+					"path": [
+						"milestone3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,83 @@
+#%RAML 1.0
+types:
+  GetUserDataType:
+    items:
+      properties:
+        id:
+          example: 2482
+          type: number
+          format: int
+        name:
+          example: Kartik Kocchar
+          type: string
+        email:
+          example: kartik_kocchar@rutherford.io
+          type: string
+        gender:
+          example: femaile
+          type: string
+        status:
+          example: inactive
+          type: string
+  PostUserRequestDataType:
+    properties:
+      post_id:
+        example: 2003
+        type: number
+        format: int
+  PostUserResponseDataType:
+    properties:
+      Userdetails:
+        items:
+          properties:
+            post_id:
+              example: 2003
+              type: number
+              format: int
+            id:
+              example: 1978
+              type: number
+              format: int
+            name:
+              example: Bhaaswar Pothuvaal III
+              type: string
+  GetUserDataTypeM3:
+    properties:
+      Name:
+        example: Gorakhanatha Chaturvedi
+        type: string
+      Status:
+        example: active
+        type: string
+      Gender:
+        example: female
+        type: string
+title: Major Assignment Smriti
+description: Final Major Assignment1
+mediaType:
+  - application/json
+version: v1
+protocols:
+  - HTTP
+/milestone1:
+  get:
+    responses:
+      "200":
+        body:
+          type: GetUserDataType
+          items:
+            type: object
+/milestone2:
+  post:
+    body:
+      type: PostUserRequestDataType
+    responses:
+      "200":
+        body:
+          type: PostUserResponseDataType
+/milestone3:
+  get:
+    responses:
+      "200":
+        body:
+          type: GetUserDataTypeM3
